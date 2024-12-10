@@ -1,0 +1,87 @@
+/* General Body Styling */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+    margin: 0;
+    padding: 20px;
+    background-color: #fdf6e3; /* Light, cheerful background */
+    background-image: linear-gradient(45deg, #f9d423 25%, #ff4e50 50%, #f9d423 75%);
+    background-size: 400%;
+    animation: backgroundScroll 10s linear infinite;
+    color: #333;
+}
+
+/* Animate the background gradient */
+@keyframes backgroundScroll {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: #ffcccb; /* Soft red background */
+    border: 2px solid #ff6347; /* Tomato border */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+header h1 {
+    font-size: 2.5rem;
+    color: #ff4500; /* Bright orange */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle Styling */
+header p {
+    font-size: 1.2rem;
+    color: #444;
+    font-style: italic;
+}
+
+/* Story Container Styling */
+.story-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 3px dashed #ffa07a; /* Fun dashed border */
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    background-color: #ffe4b5; /* A solid, soft beige background */
+};
+
+
+/* Individual Story Styling */
+.story {
+    margin-bottom: 20px;
+    border-bottom: 2px dotted #ff7f50; /* Coral dotted line */
+    padding-bottom: 15px;
+}
+
+.story:last-child {
+    border-bottom: none;
+}
+
+/* Story Author Styling */
+.story h2 {
+    font-size: 1.5rem;
+    color: #ff6347; /* Tomato */
+}
+
+/* Story Text Styling */
+.story p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hover Effects */
+.story:hover {
+    background-color: #ffcccb; /* Lavender blush background */
+    transform: scale(1.02);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    color: #fdf6e3;
+}
