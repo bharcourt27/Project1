@@ -17,7 +17,7 @@ function handleFormSubmit(event) {
     const date = document.getElementById('date').value; //id must equal #date in HTML
     const errorElement = document.getElementById('error'); //id must equal #error in HTML
 
-    errorElement.textContent=""; //clears previous error message
+    //errorElement.textContent=""; //clears previous error message
 
 
     if (!firstName || !lastName || !date) {
@@ -32,11 +32,13 @@ function handleFormSubmit(event) {
         date: date
     };
 
-    
+    // allowing object to be stored in local stoarge or to create a new array
     let blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
     blogPosts.push(blogPost);
     localStorage.setItem('blogPosts', JSON.stringify(blogPosts));
 
+    console.log('after adding:', blogPosts);
+    // reset form
     formEl.reset();
 };
 

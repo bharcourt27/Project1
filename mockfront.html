@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<body>
+    <header>
+        <h1>Adventure From Scratch</h1>
+    </header>
+    <form>
+    <h2>
+        <p>
+            <label for="firstName"></label>
+            <input id="firstName" type="text" placeholder="First Name" />
+        </p>
+        <p>
+            <label for=""></label>
+            <input id="lastName" type="text" placeholder="Last Name" />
+        </p>
+        <p>
+            <label for="date"></label>
+            <input id="date" type="text" placeholder="Date" />
+        </p>
+        <p class="flex-row">
+            <label for="story">Story Choice:</label>
+            <select id="story">
+              <option>Space Adventure</option>
+              <option selected>Haunted Forest</option>
+              <option>Cooking Catastrophe</option>
+            </select>
+        </p>
+    </h2>
+
+    <h3>
+        <p>
+            <label for="Noun"></label>
+            <input class="text-input" id="" type="text" placeholder="Noun" />
+        </p>
+        <p>
+            <label for="Adjective"></label>
+            <input class="text-input" id="" type="text" placeholder="Adjective" />
+        </p>
+        <p>
+            <label for="Plural Noun"></label>
+            <input class="text-input" id="" type="text" placeholder="Plural Noun" />
+        </p>
+        <p>
+            <label for="Place"></label>
+            <input class="text-input" id="" type="text" placeholder="Place" />
+        </p>
+        <p>
+            <label for="Adjective"></label>
+            <input class="text-input" id="" type="text" placeholder="Adjective" />
+        </p>
+        <p>
+            <label for="Animal"></label>
+            <input class="text-input" id="" type="text" placeholder="Animal" />
+        </p>
+        <p>
+            <label for="Food"></label>
+            <input class="text-input" id="" type="text" placeholder="Food" />
+        </p>
+    </h3>
+    <h4>
+        <!-- <form> -->
+        <button id="saveButton">Save This Story!</button>
+        <script>
+            document.getElementById("saveButton").addEventListener("click", function() {
+                alert("Book has been saved!");
+                this.textContent = "Book Already Saved"; 
+            });
+        </script>
+        <button id="clearButton">Clear</button>
+        <script>
+            document.getElementById("clearButton").addEventListener("click", function() {
+                alert("This story has been cleared.");
+                this.textContent = "Book Already been cleared "; 
+            });
+        </script>
+        </form>
+    </h4>
+    
+    <footer>
+        <p>&copy; 2024 Brad Harcourt, Dylan Panepucci, & Stacy Vonderheide </p>
+    </footer>
+
+    <script src="./front.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
