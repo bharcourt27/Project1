@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <!-- <link rel="stylesheet" href="project1.css"> -->
+     <link rel="stylesheet" href="./front.css">
 </head>
 <body>
     <header>
         <h1>Adventure From Scratch</h1>
     </header>
     <form>
+      <!-- <form action="blog.html" method="POST"></form> -->
     <h2>
         <p>
             <label for="firstName"></label>
@@ -24,69 +26,92 @@
             <label for="date"></label>
             <input id="date" type="text" placeholder="Date" />
         </p>
-        <p class="flex-row">
-            <label for="story">Story Choice:</label>
-            <select id="story">
-              <option>Space Adventure</option>
-              <option selected>Haunted Forest</option>
-              <option>Cooking Catastrophe</option>
-            </select>
-        </p>
+        
     </h2>
 
     <h3>
+        <title>Directions</title>
+        Please fill out the boxes below. Be serious or silly. You choose. 
         <p>
             <label for="Noun"></label>
-            <input class="text-input" id="" type="text" placeholder="Noun" />
+            <input class="text-input" id="noun" type="text" placeholder="Noun" />
         </p>
         <p>
             <label for="Adjective"></label>
-            <input class="text-input" id="" type="text" placeholder="Adjective" />
+            <input class="text-input" id="adjective" type="text" placeholder="Adjective" />
         </p>
         <p>
             <label for="Plural Noun"></label>
-            <input class="text-input" id="" type="text" placeholder="Plural Noun" />
+            <input class="text-input" id="pluralNoun" type="text" placeholder="Plural Noun" />
         </p>
         <p>
             <label for="Place"></label>
-            <input class="text-input" id="" type="text" placeholder="Place" />
+            <input class="text-input" id="place" type="text" placeholder="Place" />
         </p>
         <p>
             <label for="Adjective"></label>
-            <input class="text-input" id="" type="text" placeholder="Adjective" />
+            <input class="text-input" id="adjectivetwo" type="text" placeholder="Adjective" />
         </p>
         <p>
             <label for="Animal"></label>
-            <input class="text-input" id="" type="text" placeholder="Animal" />
+            <input class="text-input" id="animal" type="text" placeholder="Animal" />
         </p>
         <p>
             <label for="Food"></label>
-            <input class="text-input" id="" type="text" placeholder="Food" />
+            <input class="text-input" id="food" type="text" placeholder="Food" />
         </p>
     </h3>
     <h4>
-        <!-- <form> -->
-        <button id="saveButton">Save This Story!</button>
-        <script>
-            document.getElementById("saveButton").addEventListener("click", function() {
-                alert("Book has been saved!");
-                this.textContent = "Book Already Saved"; 
-            });
-        </script>
-        <button id="clearButton">Clear</button>
-        <script>
-            document.getElementById("clearButton").addEventListener("click", function() {
-                alert("This story has been cleared.");
-                this.textContent = "Book Already been cleared "; 
-            });
-        </script>
+    </form>
+
+    <!-- =====================================================Haunted Story -->
+
+    <button id="haunted">The Haunted Forest</button>
+    <!-- The Modal -->
+<div id="myModalH" class="modalH">
+    <!-- Modal content -->
+    <div class="modal-contentH">
+    <span class="closeH">&times;</span>
+    <p id="hauntedMessage"></p>
+    </div>
+</div>
+
+<!-- ============================================================Space -->
+
+        <button id="space">The Space Adventure</button>
+        <!-- The Modal -->
+<div id="myModalS" class="modalS">
+        <!-- Modal content -->
+    <div class="modal-contentS">
+        <span class="closeS">&times;</span>
+        <p id="spaceMessage"></p>
+    </div>
+</div>
+<!-- ===========================================================Cooking -->
+
+        <!-- Modal button -->
+        <button id="cooking">The Cooking Catastrophe</button>
+            <!-- The Modal -->
+    <div id="myModal" class="modal">
+            <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="cookingMessage"></p>
+        </div>
+    </div>
+
+<!-- ===========================================================Clear -->
+
+        <div>
+        <button id="clearButton"><strong>Destroy</strong></button></div>
+        
         </form>
     </h4>
-    
+
     <footer>
         <p>&copy; 2024 Brad Harcourt, Dylan Panepucci, & Stacy Vonderheide </p>
     </footer>
 
-    <script src="./front.js"></script> <!-- Link to your JavaScript file -->
+    <script src="./front.js"></script>
 </body>
 </html>

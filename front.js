@@ -60,23 +60,107 @@ formEl.addEventListener('submit', handleFormSubmit);
 
 // Clear button
 document.getElementById("clearButton").addEventListener("click", function() {
-    alert("This story has been distroyed.");
-    this.textContent = "Distroy"; 
-});
-
-// Story options
-const space = document.getElementById('space').value;
-const haunted = document.getElementById('haunted').value;
-const cooking = document.getElementById('cooking').value;
-
-document.getElementById('cooking').addEventListener("click", function() {
-    alert(`A ${firstName.value} chef decided to make a ${adjective.value} dish using ${pluralNoun.value}. However, the recipe called for a trip to the ${place.value} to find a rare spice.\
-    While there, a ${adjectivetwo.value} ${animal.value} stole their bag of ${food.value}, leaving them scrambling to finish the meal. Somehow, it turned out delicious!`);
-    
+   formEl.reset(); 
 });
 
 
-console.log(cooking)
+//=======================================================================================COOKING STORY
+const cookingMessage = document.getElementById('cookingMessage');
+
+// Get the modal
+let modal = document.getElementById("myModal");
+
+// button that opens the modal
+let cooking = document.getElementById("cooking");
+
+// element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+cooking.onclick = function() {
+  modal.style.display = "block";
+  if (cookingMessage) {
+  cookingMessage.textContent = `A ${noun.value} chef decided to make a ${adjective.value} dish using ${pluralNoun.value}. However, the recipe called for a trip to the ${place.value} to find a rare spice.\
+      While there, a ${adjectivetwo.value} ${animal.value} stole their bag of ${food.value}, leaving them scrambling to finish the meal. Somehow, it turned out delicious!`;
+}
+
+// When the user close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}};
+
+
+// =======================================================================================SPACE ADVENTURE
+const spaceMessage = document.getElementById('spaceMessage');
+
+// Get the modal
+let modalS = document.getElementById("myModalS");
+
+// button that opens the modal
+let space = document.getElementById("space");
+
+// element that closes the modal
+let spanS = document.getElementsByClassName("closeS")[0];
+
+// When the user clicks the button, open the modal 
+space.onclick = function() {
+  modalS.style.display = "block";
+  if (spaceMessage) {
+  spaceMessage.textContent = `An astronaut\'s ${noun.value} malfunctioned during a ${adjective.value} space mission. Stranded without enough ${pluralNoun.value}, they had to land on ${place.value}.
+There, a ${adjectivetwo.value} ${animal.value} offered them some ${food.value} in exchange for their help fixing a spaceship. It was a galaxy-changing day!`;
+}
+
+// When the user close the modal
+spanS.onclick = function() {
+  modalS.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalS) {
+    modalS.style.display = "none";
+  }
+}};
+
+// =======================================================================================HAUNTED STORY
+
+const hauntedMessage = document.getElementById('hauntedMessage');
+
+// Get the modal
+let modalH = document.getElementById("myModalH");
+
+// button that opens the modal
+let haunted = document.getElementById("haunted");
+
+// element that closes the modal
+let spanH = document.getElementsByClassName("closeH")[0];
+
+// When the user clicks the button, open the modal 
+haunted.onclick = function() {
+  modalH.style.display = "block";
+  if (hauntedMessage) {
+  hauntedMessage.textContent = `The brave ${noun.value} ventured into the ${adjective.value} forest in search of ${pluralNoun.value}. Deep in the heart of the ${place.value}, they stumbled upon a ${adjectivetwo.value} ${animal.value} guarding a stash of ${food.value}.
+Will they escape with the treasure, or become part of the forest\'s legend?`;
+}
+
+// When the user close the modal
+spanH.onclick = function() {
+  modalH.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modalH) {
+    modalH.style.display = "none";
+  }
+}};
 
 
 
@@ -86,4 +170,4 @@ console.log(cooking)
 
 
 // all user input will be saved to local storage
-// user choices will be deleted when CLEAR is clicked 
+// user choices will be deleted when CLEAR is clicked
