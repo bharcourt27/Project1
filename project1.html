@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Adventure From Scratch</title>
     <link rel="stylesheet" href="project1.css">
 </head>
 <body>
@@ -13,12 +13,14 @@
     <form>
       <form action="blog.html" method="POST"></form>
     <h2>
+        <div class="form-container">
+            <div class="'column"
         <p>
             <label for="firstName"></label>
             <input id="firstName" type="text" placeholder="First Name" />
         </p>
         <p>
-            <label for=""></label>
+            <label for="lastName"></label>
             <input id="lastName" type="text" placeholder="Last Name" />
         </p>
         <p>
@@ -27,38 +29,43 @@
         </p>
         
     </h2>
-
+<div class="flex-container" ></div>
     <h3>
-        <title>Directions</title>
-        Please fill out the boxes below. Be serious or silly. You choose. 
-        <p>
-            <label for="Noun"></label>
-            <input class="text-input" id="" type="text" placeholder="Noun" />
-        </p>
-        <p>
-            <label for="Adjective"></label>
-            <input class="text-input" id="" type="text" placeholder="Adjective" />
-        </p>
-        <p>
-            <label for="Plural Noun"></label>
-            <input class="text-input" id="" type="text" placeholder="Plural Noun" />
-        </p>
-        <p>
-            <label for="Place"></label>
-            <input class="text-input" id="" type="text" placeholder="Place" />
-        </p>
-        <p>
-            <label for="Adjective"></label>
-            <input class="text-input" id="" type="text" placeholder="Adjective" />
-        </p>
-        <p>
-            <label for="Animal"></label>
-            <input class="text-input" id="" type="text" placeholder="Animal" />
-        </p>
-        <p>
-            <label for="Food"></label>
-            <input class="text-input" id="" type="text" placeholder="Food" />
-        </p>
+        Directions: Please fill out the boxes below. Be serious or silly. You choose. 
+    </h3>
+    <div class="grid-container">
+            <p class="tooltip">
+             <input class="text-input card-panel hoverable" id="noun" type="text" placeholder="Noun" />
+            <span class="tooltip-box">person, place or thing</span>
+             </p>
+            <p class="tooltip">
+                <input class="text-input card-panel hoverable" id="adjective" type="text" placeholder="Adjective" />
+                <span class="tooltip-box">describes someone or something</span>
+            </p>
+
+            <p class="tooltip">
+                <input class="text-input card-panel hoverable" id="pluralNoun" type="text" placeholder="Plural Noun" />
+                <span class="tooltip-box">multiple people, places or things</span>
+            </p>
+
+            <p class="tooltip">
+                    <input class="text-input card-panel hoverable" id="place" type="text" placeholder="Place">
+                    <span class="tooltip-box">location that is enjoyable, entertaining or delightful</span>
+            </p> 
+            <p class="tooltip">
+                <input class="text-input card-panel hoverable" id="adjectivetwo" type="text" placeholder="Adjective" />
+                <span class="tooltip-box">Word that describes someone or something</span>
+                </p>  
+            <p class="tooltip">
+                <input class="text-input card-panel hoverable" id="animal" type="text" placeholder="Animal" />
+                <span class="tooltip-box">something that is fuzzy, furry or flies</span>
+                </p>
+            <p class="tooltip">
+                <input class="text-input card-panel hoverable" id="food" type="text" placeholder="Food" />
+                <span class="tooltip-box">if you don't know...yikes</span>
+                </p>
+            </div>
+    </div>
     </h3>
     <h4>
     </form>
@@ -75,24 +82,26 @@
                 The brave [1. Noun] ventured into the [2. Adjective] forest in search of [3. Plural Noun]. Deep in the heart of the [4. Place], they stumbled upon a [5. Adjective] [6. Animal] guarding a stash of [7. Food].
                 Will they escape with the treasure, or become part of the forest’s legend?</div>  
         </button>
-        <button id="cooking">Cook Catastrophe
+        <button id="cooking">Cooking Catastrophe
             <div style="display: none;">
                 The Space Adventure
                 An astronaut’s [1. Noun] malfunctioned during a [2. Adjective] space mission. Stranded without enough [3. Plural Noun], they had to land on [4. Place].
                 There, a [5. Adjective] [6. Animal] offered them some [7. Food] in exchange for their help fixing a spaceship. It was a galaxy-changing day!</div>  
         </button>
+        <button id="Destroy"><strong>Destroy</strong></button>
         <div>
-        <button id="clearButton"><strong>Distroy</strong></button></div>
+        <button id="clearButton"><strong>Destroy</strong></button></div>
         <script>
             document.getElementById("clearButton").addEventListener("click", function() {
-                alert("This story has been distroyed.");
-                this.textContent = "Distroy"; 
+
+                this.textContent = "Destroy"; 
             });
         </script>
         
-        </form>
+
     </h4>
 
+</div>
     <div style="display: none;"> 
         The Cooking Catastrophe
         A [1. Noun] chef decided to make a [2. Adjective] dish using [3. Plural Noun]. However, the recipe called for a trip to the [4. Place] to find a rare spice.
