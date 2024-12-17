@@ -20,6 +20,18 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 25px;
+    font-style: normal;
+    line-height: 2;
+    font-size: 40px;
+    background-image: url(./cooking.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-shadow: 5px 1px 10px black;
+    text-align: center;
+    color: rgb(103, 206, 240);
   }
   
   /* The Close Button */
@@ -60,6 +72,17 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100px;
+    font-style: normal;
+    line-height: 2;
+    font-size: 40px;
+    text-shadow: -5px 1px 10px white;
+    background-image: url(./galaxy.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   /* The Close Button */
@@ -100,12 +123,19 @@
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    
-    font-family: 'SpookyFont'; 
-    src: url('spooky-font.woff2') format('woff2'), url('spooky-font.woff') format('woff'); 
-    font-weight: normal; 
-    font-style: normal; 
-    background-image: url('') ;
+    font-family: "Nosifer", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2;
+    font-size: 32px;
+    word-spacing: 5px;
+    color: #ba3c3c;
+    text-shadow: 5px 1px 10px white;
+    background-image: url(./SpookySky.jpg);
+    background-position: 0px 5px 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
   }
   
   /* The Close Button */
