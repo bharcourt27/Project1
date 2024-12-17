@@ -186,6 +186,6 @@ window.onclick = function(event) {
 const back = document.getElementById('back');
 
  back.addEventListener ('click', function() {
-    window.location.href = "file:///Users/dylanpanepucci/OSU-Bootcamp/Project1-1/project1-use-this/index.html";
+    window.location.href = "index.html";
     localStorage.clear();
 });
