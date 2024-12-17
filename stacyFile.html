@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
-    <!-- <link rel="stylesheet" href="project1.css"> -->
-     <link rel="stylesheet" href="./front.css">
+    <title>Adventure From Scratch</title>
+    <link rel="stylesheet" href="./stylesheetBrad.css">
 </head>
 <body>
     <header>
         <h1>Adventure From Scratch</h1>
     </header>
     <form>
-      <!-- <form action="blog.html" method="POST"></form> -->
     <h2>
+        <div class="form-container">
+            <div class="'column"></div>
         <p>
             <label for="firstName"></label>
             <input id="firstName" type="text" placeholder="First Name" />
@@ -28,82 +28,57 @@
         </p>
         
     </h2>
-
+    <div class="flex-container" ></div>
     <h3>
         <title>Directions</title>
         Please fill out the boxes below. Be serious or silly. You choose. 
-        <p>
+    <div class="grid-container">
+        <p class="tooltip">
             <label for="Noun"></label>
             <input class="text-input" id="noun" type="text" placeholder="Noun" />
+            <span class="tooltip-box">person, place or thing</span>
         </p>
-        <p>
+        <p class="tooltip">
             <label for="Adjective"></label>
             <input class="text-input" id="adjective" type="text" placeholder="Adjective" />
+            <span class="tooltip-box">describes someone or something</span>
         </p>
-        <p>
+        <p class="tooltip">
             <label for="Plural Noun"></label>
             <input class="text-input" id="pluralNoun" type="text" placeholder="Plural Noun" />
+            <span class="tooltip-box">multiple people, places or things</span>
         </p>
-        <p>
+        <p class="tooltip">
             <label for="Place"></label>
             <input class="text-input" id="place" type="text" placeholder="Place" />
+            <span class="tooltip-box">location that is enjoyable, entertaining or delightful</span>
         </p>
-        <p>
+        <p class="tooltip">
             <label for="Adjective"></label>
             <input class="text-input" id="adjectivetwo" type="text" placeholder="Adjective" />
+            <span class="tooltip-box">describes someone or something</span>
         </p>
-        <p>
+        <p class="tooltip">
             <label for="Animal"></label>
             <input class="text-input" id="animal" type="text" placeholder="Animal" />
+            <span class="tooltip-box">something that is fuzzy, furry or flies</span>
         </p>
-        <p>
+        <p class="tooltip">
             <label for="Food"></label>
             <input class="text-input" id="food" type="text" placeholder="Food" />
+            <span class="tooltip-box">if you don't know...yikes</span>
         </p>
+    </div>
     </h3>
     <h4>
     </form>
 
-    <!-- =====================================================Haunted Story -->
-
-    <button id="haunted">The Haunted Forest</button>
-    <!-- The Modal -->
-<div id="myModalH" class="modalH">
-    <!-- Modal content -->
-    <div class="modal-contentH">
-    <span class="closeH">&times;</span>
-    <p id="hauntedMessage"></p>
-    </div>
-</div>
-
-<!-- ============================================================Space -->
-
-        <button id="space">The Space Adventure</button>
-        <!-- The Modal -->
-<div id="myModalS" class="modalS">
-        <!-- Modal content -->
-    <div class="modal-contentS">
-        <span class="closeS">&times;</span>
-        <p id="spaceMessage"></p>
-    </div>
-</div>
-<!-- ===========================================================Cooking -->
-
-        <!-- Modal button -->
-        <button id="cooking">The Cooking Catastrophe</button>
-            <!-- The Modal -->
-    <div id="myModal" class="modal">
-            <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="cookingMessage"></p>
-        </div>
-    </div>
-
 <!-- ===========================================================Clear -->
 
-        <div>
-        <button id="clearButton"><strong>Destroy</strong></button></div>
+    <div>
+        <button id="clearButton"><strong>Destroy</strong></button>
+        <button id="submit-nextpage"><strong>Choose Your Story!</strong></button>
+    </div>
         
         </form>
     </h4>
@@ -112,6 +87,6 @@
         <p>&copy; 2024 Brad Harcourt, Dylan Panepucci, & Stacy Vonderheide </p>
     </footer>
 
-    <script src="./front.js"></script>
+    <script src="./scriptStacy.js"></script>
 </body>
 </html>
