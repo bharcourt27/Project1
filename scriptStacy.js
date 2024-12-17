@@ -100,5 +100,5 @@ let spanH = document.getElementsByClassName("closeH")[0];
 const submit = document.getElementById('submit-nextpage');
 
 submit.addEventListener ('click', function() {
-    window.location.href = "file:///Users/dylanpanepucci/OSU-Bootcamp/Project1-1/project1-use-this/bradFile.html"
+    document.location.href = "file:///Users/dylanpanepucci/OSU-Bootcamp/Project1-1/project1-use-this/bradFile.html"
 });
