@@ -1,9 +1,3 @@
-// TODO: 
-// User will enter in First name and be saved to local storage 
-// user will enter last name and stored to local storage
-// user will enter date and be stored to local storage
-// Object array will be needed
-// First,Last and Date will need to be shown with story once SAVE is clicked.
 
 
 const formEl = document.querySelector('form'); // assuming the use of form element with no class or ID
@@ -24,6 +18,7 @@ function handleFormSubmit(event) {
     const adjectivetwo = document.getElementById('adjectivetwo').value;
     const animal = document.getElementById('animal').value;
     const food = document.getElementById('food').value;
+    
 
 
     // ADD ERROR MESSAGE FOR INCOMPLETE FORM //
@@ -43,7 +38,7 @@ function handleFormSubmit(event) {
         place: place,
         adjectivetwo: adjectivetwo,
         animal: animal,
-        food: food
+        food: food,
     };
 
     // allowing object to be stored in local stoarge or to create a new array
@@ -76,27 +71,6 @@ let cooking = document.getElementById("cooking");
 // element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-cooking.onclick = function() {
-  modal.style.display = "block";
-  if (cookingMessage) {
-  cookingMessage.textContent = `A ${noun.value} chef decided to make a ${adjective.value} dish using ${pluralNoun.value}. However, the recipe called for a trip to the ${place.value} to find a rare spice.\
-      While there, a ${adjectivetwo.value} ${animal.value} stole their bag of ${food.value}, leaving them scrambling to finish the meal. Somehow, it turned out delicious!`;
-}
-
-// When the user close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}};
-
-
 // =======================================================================================SPACE ADVENTURE
 const spaceMessage = document.getElementById('spaceMessage');
 
@@ -109,25 +83,6 @@ let space = document.getElementById("space");
 // element that closes the modal
 let spanS = document.getElementsByClassName("closeS")[0];
 
-// When the user clicks the button, open the modal 
-space.onclick = function() {
-  modalS.style.display = "block";
-  if (spaceMessage) {
-  spaceMessage.textContent = `An astronaut\'s ${noun.value} malfunctioned during a ${adjective.value} space mission. Stranded without enough ${pluralNoun.value}, they had to land on ${place.value}.
-There, a ${adjectivetwo.value} ${animal.value} offered them some ${food.value} in exchange for their help fixing a spaceship. It was a galaxy-changing day!`;
-}
-
-// When the user close the modal
-spanS.onclick = function() {
-  modalS.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalS) {
-    modalS.style.display = "none";
-  }
-}};
 
 // =======================================================================================HAUNTED STORY
 
@@ -142,32 +97,8 @@ let haunted = document.getElementById("haunted");
 // element that closes the modal
 let spanH = document.getElementsByClassName("closeH")[0];
 
-// When the user clicks the button, open the modal 
-haunted.onclick = function() {
-  modalH.style.display = "block";
-  if (hauntedMessage) {
-  hauntedMessage.textContent = `The brave ${noun.value} ventured into the ${adjective.value} forest in search of ${pluralNoun.value}. Deep in the heart of the ${place.value}, they stumbled upon a ${adjectivetwo.value} ${animal.value} guarding a stash of ${food.value}.
-Will they escape with the treasure, or become part of the forest\'s legend?`;
-}
+const submit = document.getElementById('submit-nextpage');
 
-// When the user close the modal
-spanH.onclick = function() {
-  modalH.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modalH) {
-    modalH.style.display = "none";
-  }
-}};
-
-
-
-// when one story is selected 
-// answers from users will populate on story
-// story will display to user when SAVE is clicked
-
-
-// all user input will be saved to local storage
-// user choices will be deleted when CLEAR is clicked
+submit.addEventListener ('click', function() {
+    window.location.href = "file:///Users/dylanpanepucci/OSU-Bootcamp/Project1-1/Project1/Brad's%20Files/bradFile.html"
+});
