@@ -47,7 +47,7 @@ The following image demonstrates the web application's appearance and functional
 ![Story Selector](Story-Selection.png)
 
 ## Link to Application
-***
+https://bharcourt27.github.io/Project1/
 
 
 ## Credits
