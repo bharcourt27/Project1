@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>My First Blog</title>
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+  <link rel="stylesheet" href="./assets/css/blog.css" />
+
+  <script defer src="./assets/js/logic.js" type="text/javascript"></script>
+  <script defer src="./assets/js/blog.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+  <!-- TODO: Create header, main, and footer elements -->
+  <header>
+    <h1>My First Blog</h1>
+    <nav>
+      <button onclick="navigateToPage()">Home</button>
+      <button id="toggleButton">🌞</button>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Submitted Data</h2>
+      <p><strong>Username:</strong> <span id="display-username"></span></p>
+      <p><strong>Title:</strong> <span id="display-title"></span></p>
+      <p><strong>Content:</strong> <span id="display-content"></span></p>
+    </section>
+
+    <section>
+      <h2>Blog Posts</h2>
+      <div id="blog-posts-container">
+        <!-- Dynamically generated blog posts will go here -->
+      </div>
+    </section>
+    <script>
+      // Retrieve and display blog posts from local storage
+      const postsContainer = document.getElementById('posts');
+      const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+
+      if (blogPosts.length > 0) {
+          blogPosts.forEach(post => {
+              const postElement = document.createElement('div');
+              postElement.innerHTML = `<h2>${post.title}</h2><p>by ${post.username}</p><p>${post.content}</p>`;
+              postsContainer.appendChild(postElement);
+          });
+      } else {
+          postsContainer.innerHTML = '<p>No blog posts available.</p>';
+      }
+  </script>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 My First Blog. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Function to navigate back to the home page
+    function navigateToPage() {
+      window.location.href = 'index.html'; // Replace with your form page URL
+    }
+
+    // Function to toggle light/dark mode
+    const toggleButton = document.getElementById('toggleButton');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      const currentMode = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+      localStorage.setItem('mode', currentMode);
+      toggleButton.textContent = currentMode === 'dark' ? '🌙' : '🌞'; // Change icon based on mode
+    });
+
+    // Load submitted data and blog posts from local storage
+    window.onload = function() {
+      const submittedData = JSON.parse(localStorage.getItem('formData'));
+      if (submittedData) {
+        document.getElementById('display-username').textContent = submittedData.username;
+        document.getElementById('display-title').textContent = submittedData.title;
+        document.getElementById('display-content').textContent = submittedData.content;
+      }
+
+      // Load blog posts
+      const blogPosts = JSON.parse(localStorage.getItem('blogPosts')) || [];
+      const blogPostsContainer = document.getElementById('blog-posts-container');
+      blogPosts.forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.innerHTML = `<h3>${post.title}</h3><p>${post.content}</p><p><em>by ${post.username}</em></p>`;
+        blogPostsContainer.appendChild(postElement);
+      });
+
+      // Set initial mode based on user preference
+      const currentMode = localStorage.getItem('mode') || 'light';
+      document.body.classList.toggle('dark-mode', currentMode === 'dark');
+      toggleButton.textContent = currentMode === 'dark' ? '🌙' : '🌞'; // Set initial icon
+    };
+  </script
