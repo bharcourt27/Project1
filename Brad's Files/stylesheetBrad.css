@@ -1,0 +1,160 @@
+/* General Body Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #77a8e3, #6fb3ce, #045c88, #77a8e3);
+    background-size: 200% 200%; /* Adjusted size for smooth looping */
+    animation: backgroundScroll 10s linear infinite; /* Infinite animation */
+    color: #333;
+ }
+ 
+ 
+ /* Keyframes for Seamless Animation */
+ @keyframes backgroundScroll {
+    0% { background-position: 0% 50%; } /* Start at left */
+    50% { background-position: 100% 50%; } /* Move to right */
+    100% { background-position: 0% 50%; } /* Loop back to left */
+ }
+ 
+ 
+ 
+ 
+ /* Header Styling */
+ header {
+    text-align: center;
+    padding: 20px;
+    background-color: #005f99;
+    color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: 700;
+ }
+ 
+ 
+ header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-style: italic;
+ }
+ 
+ 
+ /* Story Container Styling */
+ .story-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #cce7ff; /* Light blue border */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+ }
+ 
+ 
+ /* Individual Story Styling */
+ .story {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e6ed;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 8px; /* Rounded corners */
+    transition: color 0.3s ease, box-shadow 0.3s ease; /* text and shadow transitions */
+    position: relative; /* For layering the hover effect */
+    overflow: hidden; /* Ensure the hover effect stays within the rounded corners */
+ }
+ 
+ 
+ .story:last-child {
+    border-bottom: none;
+ }
+ 
+ 
+ .story h2 {
+    font-size: 1.5rem;
+    color: #005f99;
+    font-weight: 600;
+ }
+ 
+ 
+ .story p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+ }
+ 
+ 
+ /* Hover Effects for Stories */
+ .story::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #77a8e3, #6fb3ce, #045c88); /* Gradient background */
+    transition: top 0.3s ease; /* Rise animation */
+    border-radius: 8px; /* Match the parent's rounded corners */
+    z-index: 0; /* Place below the text */
+ }
+ 
+ 
+ /* Text on top */
+ .story h2, .story p {
+    position: relative;
+    z-index: 1; /* Keep text above the gradient */
+    margin: 0;
+    color: #333;
+    transition: color 0.3s ease; /* Color transition */
+ }
+ 
+ 
+ /* Hover Effect */
+ .story:hover::before {
+    top: 0; /* Move gradient to cover the element */
+ }
+ 
+ 
+ .story:hover h2, .story:hover p {
+    color: #ffffff; /* Change text color for contrast */
+ }
+ 
+ 
+ .story:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+ }
+   
+ 
+ 
+ a,button, .story {
+    cursor: pointer;
+   
+ }
+ 
+ 
+ a,button {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+ }
+ 
+ 
+ a,button:hover {
+   
+ }
+ 
+ 
+ /* Footer (if you want to add one) */
+ footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #005f99;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+ }
